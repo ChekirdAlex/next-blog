@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . && stylelint \"src/**/*.css\" && npm run format:check",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"*.{json,mjs}\" && npm run format:css",
+    "format:css": "stylelint \"src/**/*.css\" --fix",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\" \"*.{json,mjs}\""
   },
   "dependencies": {
     "next": "16.3.8",
@@ -14,12 +18,19 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@stylistic/stylelint-plugin": "^5.3.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "stylelint": "^17.16.0",
+    "stylelint-config-recess-order": "^7.8.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-order": "^8.1.1",
     "typescript": "^5"
   }
 }
