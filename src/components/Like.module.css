@@ -1,0 +1,60 @@
+.like {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+
+  font-size: 16px;
+  color: #303030;
+}
+
+.button {
+  display: grid;
+  flex: none;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: #303030;
+  cursor: pointer;
+
+  background: #FFF;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+}
+
+.button:hover,
+.liked {
+  color: #FFF;
+
+  background: #303030;
+}
+
+.button:focus-visible {
+  outline: 2px solid #1677FF;
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+
+  background: currentcolor;
+  mask-image: url("/like.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.error {
+  flex-basis: 100%;
+
+  font-size: 14px;
+  color: #B42318;
+}
