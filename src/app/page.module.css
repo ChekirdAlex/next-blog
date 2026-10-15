@@ -1,5 +1,14 @@
 .page {
   display: grid;
+  gap: 24px;
   justify-items: center;
   padding: 48px 16px;
+}
+
+.like-demo {
+  width: min(350px, 100%);
+  padding: 16px;
+
+  background: #FFF;
+  border-radius: 5px;
 }
