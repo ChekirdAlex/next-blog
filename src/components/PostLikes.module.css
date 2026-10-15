@@ -1,0 +1,37 @@
+.likes {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+
+  min-height: 20px;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  color: #808080;
+  white-space: nowrap;
+  cursor: pointer;
+
+  background: none;
+  border: 0;
+}
+
+.likes:focus-visible {
+  outline: 2px solid #1677FF;
+  outline-offset: 4px;
+}
+
+.liked {
+  color: #1677FF;
+}
+
+.icon {
+  width: 13px;
+  height: 13px;
+
+  background-color: currentcolor;
+  mask-image: url("/like.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
